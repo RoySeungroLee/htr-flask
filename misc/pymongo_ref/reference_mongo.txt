@@ -1,0 +1,20 @@
+In Mongo
+
+mongo
+use g5
+db
+show dbs
+
+In GitBash shell
+mongoimport -d g5 -c colt --type csv --file g5_tech.csv --headerline
+
+In Mongo
+use g5
+show collections
+output: colt
+db.colt.find().pretty()
+
+
+mongoimport -d g5 -c colt --upsert --upsertFields --file g5_tech.csv 
+
+mongoimport -d g5 -c colt --upsertFields g5_tech.csv
